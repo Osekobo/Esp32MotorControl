@@ -12,6 +12,7 @@ void handleRoot() {
   String html = "<h1>ESP32 Motor Control</h1>";
   html += "<p><a href='/on'><button>ON</button></a></p>";
   html += "<p><a href='/off'><button>OFF</button></a></p>";
+  html += "<p>Motor is " + String(digitalRead(motorPin) ? "ON" : "OFF") + "</p>";
   server.send(200, "text/html", html);
 }
 
